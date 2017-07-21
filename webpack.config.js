@@ -16,7 +16,8 @@ module.exports = {
       WeatherMessage: path.resolve(__dirname, 'app/components/WeatherMessage'),
       About: path.resolve(__dirname, 'app/components/About.jsx'),
       Examples: path.resolve(__dirname, 'app/components/Examples.jsx'),
-      ActiveLink: path.resolve(__dirname, 'app/components/ActiveLink.jsx')
+      ActiveLink: path.resolve(__dirname, 'app/components/ActiveLink.jsx'),
+      openWeatherMap: path.resolve(__dirname, 'app/api/openWeatherMap.jsx')
     },
     extensions: ['*', '.js', '.jsx']
   },

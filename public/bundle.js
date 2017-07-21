@@ -12905,8 +12905,8 @@ var _require = __webpack_require__(60),
 
 var Main = __webpack_require__(243);
 var Weather = __webpack_require__(246);
-var About = __webpack_require__(247);
-var Examples = __webpack_require__(248);
+var About = __webpack_require__(248);
+var Examples = __webpack_require__(249);
 var WeatherForm = __webpack_require__(111);
 var WeaterMessage = __webpack_require__(112);
 
@@ -27854,6 +27854,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var React = __webpack_require__(4);
 var WeatherForm = __webpack_require__(111);
 var WeatherMessage = __webpack_require__(112);
+var openWeatherMap = __webpack_require__(247);
 
 var Weather = function (_React$Component) {
   _inherits(Weather, _React$Component);
@@ -27863,10 +27864,15 @@ var Weather = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Weather.__proto__ || Object.getPrototypeOf(Weather)).call(this, props));
 
-    _this.handleSearch = function (locaton) {
-      _this.setState({
-        location: locaton,
-        temp: 45
+    _this.handleSearch = function (location) {
+      var that = _this;
+      openWeatherMap.getTemp(location).then(function (temp) {
+        that.setState({
+          location: location,
+          temp: temp
+        });
+      }, function (errorMessage) {
+        alert(errorMessage);
       });
     };
 
@@ -27903,6 +27909,12 @@ module.exports = Weather;
 
 /***/ }),
 /* 247 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: SyntaxError: Unexpected token (6:10)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m\n \u001b[90m 5 | \u001b[39mmodule\u001b[33m.\u001b[39mexports \u001b[33m=\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m  getTemp \u001b[33m=\u001b[39m (location) \u001b[33m=>\u001b[39m {\n \u001b[90m   | \u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 | \u001b[39m    let encodedLocation \u001b[33m=\u001b[39m encodedURIComponent(location)\u001b[33m;\u001b[39m\n \u001b[90m 8 | \u001b[39m     requestUrl \u001b[33m=\u001b[39m \u001b[32m`${OPEN.WEATHER_MAP_URL}&q=${encodedLocation}`\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 9 | \u001b[39m\u001b[0m\n");
+
+/***/ }),
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27946,7 +27958,7 @@ var About = function (_React$Component) {
 module.exports = About;
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
