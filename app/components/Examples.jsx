@@ -1,11 +1,9 @@
 const React = require('react');
 
-class Examples extends React.Component {
-  render(){
+var Examples = (props) => {
     return(
       <h3>Examples Component</h3>
-    );
-  }
-};
+    )
+  };
 
 module.exports = Examples;
