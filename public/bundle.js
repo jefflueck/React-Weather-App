@@ -29465,13 +29465,18 @@ var React = __webpack_require__(4);
 
 var Examples = function Examples(props) {
   return React.createElement(
-    'h3',
+    'div',
     null,
-    'Examples'
-  ), React.createElement(
-    'p',
-    null,
-    'Welcome to the examples page!'
+    React.createElement(
+      'h3',
+      null,
+      'Examples'
+    ),
+    React.createElement(
+      'p',
+      null,
+      'Welcome to the examples page!'
+    )
   );
 };
 
