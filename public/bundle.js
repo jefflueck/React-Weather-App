@@ -29451,7 +29451,7 @@ var About = function About(props) {
     React.createElement(
       'h3',
       null,
-      'About Component'
+      'About'
     ),
     React.createElement(
       'p',
