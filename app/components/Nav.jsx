@@ -10,7 +10,7 @@ var Nav = () => {
       <ActiveLink to="/about">About</ActiveLink>
       <ActiveLink to="/examples">Examples</ActiveLink>
     </div>
-  );
-}
+  )
+};
 
 module.exports = Nav;

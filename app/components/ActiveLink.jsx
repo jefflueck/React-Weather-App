@@ -7,6 +7,6 @@ class ActiveLink extends React.Component {
       <IndexLink to={this.props.to} activeClassName="active" activeStyle={{fontWeight: "bold"}}>{this.props.children}</IndexLink>
     )
   }
-}
+};
 
 module.exports = ActiveLink;
