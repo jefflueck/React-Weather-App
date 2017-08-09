@@ -8,6 +8,10 @@
   const WeatherForm = require('WeatherForm');
   const WeaterMessage = require('WeatherMessage');
 
+  // Load foundation
+  require('style!css!foundation-sites/dist/css/foundation.min.css')
+  $(document).foundation();
+
 
   ReactDOM.render(
     <Router history={hashHistory}>
