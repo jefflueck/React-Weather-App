@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: [
     'script-loader!jquery/dist/jquery.min.js',
-    'script-loader!foundation-sites/dist/foundation.min.js',
+    'script-loader!foundation-sites/dist/js/foundation.min.js',
     './app/app.jsx',
   ],
   externals: {
@@ -45,14 +45,6 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       },
-      {
-        loader: 'style-loader',
-        query: {
-          presets: ['react', 'es2015', 'stage-0']
-        },
-        test: /\.css?$/,
-        exclude: /(node_modules|bower_components)/
-      }
     ]
   },
   devtool: '#cheap-module-source-map'
