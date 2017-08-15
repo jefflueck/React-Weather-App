@@ -1,10 +1,19 @@
 const React = require('react');
+const {IndexLink} = require('react-router');
 
 var Examples = (props) => {
     return(
     <div>
-      <h3>Examples</h3>
-      <p>Welcome to the examples page!</p>
+      <h1 className="text-center">Examples</h1>
+      <p>Here a few example locations to try out:</p>
+      <ol>
+        <li>
+          <IndexLink to="/?location=Green Bay">Green Bay, WI</IndexLink>
+        </li>
+        <li>
+          <IndexLink to="/?location=Chicago">Chicago, IL</IndexLink>
+        </li>
+      </ol>
     </div>
     )
   };
