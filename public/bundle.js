@@ -29586,17 +29586,46 @@ var React = __webpack_require__(4);
 
 var About = function About(props) {
   return React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
-      null,
-      'About'
+      "h1",
+      { className: "text-center" },
+      "About"
     ),
     React.createElement(
-      'p',
+      "p",
       null,
-      'Welcome to the about page!'
+      "This app was built as a class project to display the power of react.js!"
+    ),
+    React.createElement(
+      "p",
+      null,
+      "Here are some of the resources I used:"
+    ),
+    React.createElement(
+      "ul",
+      null,
+      React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: "https://facebook.github.io/react/" },
+          "React Website"
+        ),
+        " - This is the JavaScript framework used."
+      ),
+      React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: "http://openweathermap.org/" },
+          "Open Weather Map"
+        ),
+        " - I used Open Wether Map to search for weather data by name."
+      )
     )
   );
 };

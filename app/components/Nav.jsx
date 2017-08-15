@@ -22,7 +22,6 @@ class Nav extends React.Component {
             <li>
               <ActiveLink to="/examples">Examples</ActiveLink>
             </li>
-
           </ul>
         </div>
         <div className="top-bar-right">
