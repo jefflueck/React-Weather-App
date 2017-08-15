@@ -28508,12 +28508,12 @@ var Nav = function (_React$Component) {
               React.createElement(
                 'li',
                 null,
-                React.createElement('input', { type: 'search', placeholder: 'Search Weather' }),
-                React.createElement(
-                  'li',
-                  null,
-                  React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
-                )
+                React.createElement('input', { type: 'search', placeholder: 'Search Weather' })
+              ),
+              React.createElement(
+                'li',
+                null,
+                React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
               )
             )
           )

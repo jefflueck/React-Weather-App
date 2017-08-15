@@ -30,13 +30,11 @@ class Nav extends React.Component {
             <ul className="menu">
               <li>
                 <input type="search" placeholder="Search Weather"/>
-                <li>
-                  <input type="submit" className="button" value="Get Weather"/>
-                </li>
               </li>
-
+              <li>
+                <input type="submit" className="button" value="Get Weather"/>
+              </li>
             </ul>
-
           </form>
         </div>
       </div>
