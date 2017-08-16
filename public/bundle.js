@@ -30142,7 +30142,7 @@ var Weather = function (_React$Component) {
           errorMessage = _state.errorMessage;
 
 
-      renderMessage = function renderMessage() {
+      function renderMessage() {
         if (isLoading) {
           return React.createElement(
             'h3',
@@ -30152,13 +30152,13 @@ var Weather = function (_React$Component) {
         } else if (temp && location) {
           return React.createElement(WeatherMessage, { temp: temp, location: location });
         }
-      };
+      }
 
-      renderError = function renderError() {
+      function renderError() {
         if (typeof errorMessage === 'string') {
           return React.createElement(ErrorModal, null);
         }
-      };
+      }
       return React.createElement(
         'div',
         null,
@@ -31099,7 +31099,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var react = __webpack_require__(293);
+var React = __webpack_require__(293);
 
 var ErrorModal = function (_React$Component) {
   _inherits(ErrorModal, _React$Component);

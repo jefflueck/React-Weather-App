@@ -36,7 +36,7 @@ class Weather extends React.Component {
     // ES6 Destructuring
     var {isLoading, temp, location, errorMessage} = this.state;
 
-    renderMessage = () => {
+    function renderMessage () {
         if (isLoading) {
           return<h3 className="text-center">Fetching Weather...</h3>
       } else if (temp && location) {
@@ -44,7 +44,7 @@ class Weather extends React.Component {
       }
     }
 
-    renderError = () => {
+    function renderError () {
       if (typeof errorMessage === 'string') {
         return (
           <ErrorModal/>
