@@ -16,7 +16,7 @@ class WeatherForm extends React.Component {
       <div>
         <form onSubmit={this.onFormSubmit}>
           <input type="text" ref={(ref) => this.location = ref}/>
-          <button>Get Weather</button>
+          <button className="button expanded hollow">Get Weather</button>
         </form>
       </div>
     )
