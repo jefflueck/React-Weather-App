@@ -32,7 +32,8 @@ module.exports = {
       Examples: path.resolve(__dirname, 'app/components/Examples.jsx'),
       ActiveLink: path.resolve(__dirname, 'app/components/ActiveLink.jsx'),
       openWeatherMap: path.resolve(__dirname, 'app/api/openWeatherMap.jsx'),
-      ErrorModal: path.resolve(__dirname, 'app/components/ErrorModal.jsx')
+      ErrorModal: path.resolve(__dirname, 'app/components/ErrorModal.jsx'),
+      applicationStyles: path.resolve(__dirname, 'app/styles/app.css')
     },
     extensions: ['*', '.js', '.jsx']
   },

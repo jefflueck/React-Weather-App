@@ -3,7 +3,7 @@ const React = require('react');
 var About = (props) => {
   return(
   <div>
-    <h1 className="text-center">About</h1>
+    <h1 className="text-center page-title">About</h1>
     <p>This app was built as a class project to display the power of react.js!</p>
     <p>Here are some of the resources I used:</p>
     <ul>
