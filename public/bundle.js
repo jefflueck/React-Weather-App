@@ -30155,8 +30155,8 @@ var Weather = function (_React$Component) {
       }
 
       function renderError() {
-        if (typeof errorMessage === 'string') {
-          return React.createElement(ErrorModal, null);
+        if (typeof errorMessage === "string") {
+          return React.createElement(ErrorModal, { message: errorMessage });
         }
       }
       return React.createElement(
@@ -31111,6 +31111,13 @@ var ErrorModal = function (_React$Component) {
   }
 
   _createClass(ErrorModal, [{
+    key: 'getDefaultProps',
+    value: function getDefaultProps() {
+      return {
+        title: 'Error'
+      };
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       var modal = new Foundation.Reveal($('#error-modal'));
@@ -31119,18 +31126,22 @@ var ErrorModal = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _props = this.props,
+          title = _props.title,
+          message = _props.message;
+
       return React.createElement(
         'div',
         { id: 'error-modal', className: 'reveal tiny text-center', 'data-reveal': '' },
         React.createElement(
           'h4',
           null,
-          'Some Title'
+          title
         ),
         React.createElement(
           'p',
           null,
-          'Our error message'
+          message
         ),
         React.createElement(
           'p',
