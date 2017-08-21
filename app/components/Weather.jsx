@@ -12,8 +12,7 @@ class Weather extends React.Component {
     }
   };
   handleSearch = (location) => {
-    let that = this;
-
+    const that = this;
     that.setState({
       isLoading: true,
       errorMessage: undefined
@@ -34,7 +33,7 @@ class Weather extends React.Component {
   }
   render(){
     // ES6 Destructuring
-    var {isLoading, temp, location, errorMessage} = this.state;
+    let {isLoading, temp, location, errorMessage} = this.state;
 
     function renderMessage () {
         if (isLoading) {
@@ -45,7 +44,7 @@ class Weather extends React.Component {
     }
 
     function renderError () {
-      if (typeof errorMessage === "string") {
+      if (typeof errorMessage === 'string') {
         return (
           <ErrorModal message={errorMessage}/>
         )

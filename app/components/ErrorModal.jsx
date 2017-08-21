@@ -1,4 +1,4 @@
-const React = require('React');
+const React = require('react');
 
 class ErrorModal extends React.Component {
   getDefaultProps(){
@@ -11,11 +11,11 @@ class ErrorModal extends React.Component {
     message: React.PropTypes.string.isRequired
   }
   componentDidMount(){
-    const modal = new Foundation.Reveal($('#error-modal'));
+    let modal = new Foundation.Reveal($('#error-modal'));
     modal.open();
   }
   render() {
-    const {title, message} = this.props;
+    let {title, message} = this.props;
     return(
       <div id="error-modal" className="reveal tiny text-center" data-reveal="">
         <h4>{title}</h4>
