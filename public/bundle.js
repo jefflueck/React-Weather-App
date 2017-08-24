@@ -13929,11 +13929,11 @@ var WeatherForm = __webpack_require__(115);
 var WeaterMessage = __webpack_require__(116);
 
 // Load foundation
-__webpack_require__(290);
+__webpack_require__(286);
 $(document).foundation();
 
 // App css
-__webpack_require__(292);
+__webpack_require__(288);
 
 ReactDOM.render(React.createElement(
   Router,
@@ -28762,7 +28762,14 @@ var Nav = function (_React$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Nav.__proto__ || Object.getPrototypeOf(Nav)).call.apply(_ref, [this].concat(args))), _this), _this.onSearch = function (e) {
       e.preventDefault();
-      alert('Not yet wired up!');
+
+      var location = _this.refs.search.value;
+      var encodedLocation = encodeURIComponent(location);
+
+      if (location.length > 0) {
+        _this.refs.search.value = '';
+        window.location.hash = '#/?location ' + encodedLocation;
+      }
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -28824,7 +28831,7 @@ var Nav = function (_React$Component) {
               React.createElement(
                 'li',
                 null,
-                React.createElement('input', { type: 'search', placeholder: 'Search weather by city' })
+                React.createElement('input', { type: 'search', placeholder: 'Search weather by city', ref: 'search' })
               ),
               React.createElement(
                 'li',
@@ -28925,7 +28932,9 @@ var Weather = function (_React$Component) {
       var that = _this;
       that.setState({
         isLoading: true,
-        errorMessage: undefined
+        errorMessage: undefined,
+        location: undefined,
+        temp: undefined
       });
 
       openWeatherMap.getTemp(location).then(function (temp) {
@@ -28949,6 +28958,26 @@ var Weather = function (_React$Component) {
   }
 
   _createClass(Weather, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var location = this.props.location.query.location;
+
+      if (location && location.length > 0) {
+        this.handleSearch(location);
+        window.location.hash = '#/';
+      }
+    }
+  }, {
+    key: 'componentWillRecieveProps',
+    value: function componentWillRecieveProps(newProps) {
+      var location = newProps.location.query.location;
+
+      if (location && location.length > 0) {
+        this.handleSearch(location);
+        window.location.hash = '#/';
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       // ES6 Destructuring
@@ -29020,8 +29049,8 @@ module.exports = {
       } else {
         return res.data.main.temp;
       }
-      (function (err) {
-        throw new Error('Unable to fetch weather for that location.');
+      (function (res) {
+        throw new Error(res.data.message);
       });
     });
   }
@@ -30092,17 +30121,13 @@ var Examples = function Examples(props) {
 module.exports = Examples;
 
 /***/ }),
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(291);
+var content = __webpack_require__(287);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(123)(content, {});
@@ -30122,7 +30147,7 @@ if(false) {
 }
 
 /***/ }),
-/* 291 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(122)();
@@ -30136,13 +30161,13 @@ exports.push([module.i, "@charset \"UTF-8\";@media print,screen and (min-width:4
 
 
 /***/ }),
-/* 292 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(293);
+var content = __webpack_require__(289);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(123)(content, {});
@@ -30162,7 +30187,7 @@ if(false) {
 }
 
 /***/ }),
-/* 293 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(122)();

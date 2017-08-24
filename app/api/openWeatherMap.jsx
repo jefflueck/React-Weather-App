@@ -13,8 +13,8 @@ module.exports = {
       } else {
         return res.data.main.temp;
       }
-      ((err) => {
-        throw new Error('Unable to fetch weather for that location.');
+      ((res) => {
+        throw new Error(res.data.message);
       })
     })
   }
