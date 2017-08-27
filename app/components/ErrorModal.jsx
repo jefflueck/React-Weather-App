@@ -22,7 +22,7 @@ class ErrorModal extends React.Component {
         <p>{message}</p>
         <p>
           <button className="button hollow" data-close="">
-            Okay.
+            Okay
           </button>
         </p>
       </div>

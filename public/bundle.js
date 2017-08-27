@@ -29995,7 +29995,7 @@ var ErrorModal = function (_React$Component) {
           React.createElement(
             'button',
             { className: 'button hollow', 'data-close': '' },
-            'Okay.'
+            'Okay'
           )
         )
       );
