@@ -11,7 +11,7 @@ class Nav extends React.Component {
 
     if(location.length > 0) {
       this.refs.search.value = '';
-      window.location.hash = '#/?location ' + encodedLocation;
+      window.location.hash = '#/?location=' + encodedLocation;
     }
   }
   render() {

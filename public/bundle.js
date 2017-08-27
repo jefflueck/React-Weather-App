@@ -28768,7 +28768,7 @@ var Nav = function (_React$Component) {
 
       if (location.length > 0) {
         _this.refs.search.value = '';
-        window.location.hash = '#/?location ' + encodedLocation;
+        window.location.hash = '#/?location=' + encodedLocation;
       }
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -29995,7 +29995,7 @@ var ErrorModal = function (_React$Component) {
           React.createElement(
             'button',
             { className: 'button hollow', 'data-close': '' },
-            'Okay'
+            'Okay.'
           )
         )
       );
