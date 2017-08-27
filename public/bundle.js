@@ -28967,6 +28967,8 @@ var Weather = function (_React$Component) {
         window.location.hash = '#/';
       }
     }
+    // Recieve props
+
   }, {
     key: 'componentWillRecieveProps',
     value: function componentWillRecieveProps(newProps) {

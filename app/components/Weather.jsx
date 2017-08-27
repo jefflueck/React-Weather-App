@@ -41,6 +41,7 @@ class Weather extends React.Component {
       window.location.hash = '#/';
     }
   }
+  // Recieve props
   componentWillRecieveProps(newProps) {
     let location = newProps.location.query.location;
 
