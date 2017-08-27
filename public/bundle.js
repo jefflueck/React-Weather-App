@@ -28970,8 +28970,8 @@ var Weather = function (_React$Component) {
     // Recieve props
 
   }, {
-    key: 'componentWillRecieveProps',
-    value: function componentWillRecieveProps(newProps) {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(newProps) {
       var location = newProps.location.query.location;
 
       if (location && location.length > 0) {
